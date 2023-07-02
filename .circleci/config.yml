@@ -29,4 +29,4 @@ jobs:
             echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
             docker buildx create --use
-            docker buildx build --platform linux/amd64,linux/arm64 -t digitop/t3-app-starter-circleci:v1 --push .
+            docker buildx build --platform linux/amd64,linux/arm64 -t digitop/t3-app-starter:circleci --push .
