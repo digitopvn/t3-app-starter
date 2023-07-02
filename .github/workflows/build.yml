@@ -57,6 +57,9 @@ jobs:
         run: pnpm install
 
       - name: Build source code
+        env:
+          SKIP_ENV_VALIDATION: true
+          NODE_ENV: production
         run: pnpm build
 
       - name: Login to Docker Hub
