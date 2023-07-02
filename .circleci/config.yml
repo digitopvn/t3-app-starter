@@ -30,3 +30,10 @@ jobs:
 
             docker buildx create --use
             docker buildx build --platform linux/amd64,linux/arm64 -t digitop/t3-app-starter:circleci --push .
+
+# Orchestrate jobs using workflows
+# See: https://circleci.com/docs/configuration-reference/#workflows
+workflows:
+  build-workflow:
+    jobs:
+      - build-and-push
