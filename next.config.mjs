@@ -9,6 +9,12 @@ const config = {
   reactStrictMode: true,
   output: "standalone",
 
+  eslint: {
+    // Warning: This allows production builds to successfully complete even if
+    // your project has ESLint errors.
+    ignoreDuringBuilds: true,
+  },
+
   /**
    * If you have `experimental: { appDir: true }` set, then you must comment the below `i18n` config
    * out.

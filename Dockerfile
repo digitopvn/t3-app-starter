@@ -10,11 +10,13 @@ WORKDIR /usr/src
 
 COPY ./package.json ./package.json
 
-RUN npm i pnpm -g
+RUN npm i
 
 # apps
 COPY . .
 COPY ./.env.prod ./.env
+
+RUN npm -v
 
 # Start building
 RUN npm run build
